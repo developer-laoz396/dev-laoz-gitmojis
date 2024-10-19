@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emojis</title>
+    <link rel="stylesheet" href="styles.min.css" />
+  </head>
+  <body>
+    <div class="header">
+      <h1>Lista de Emojis</h1>
+      <h4>Selecciona un emoji para copiarlo al portapapeles</h4>  
+    </div>
+    <div class="search-container">
+      <input type="text" id="search" placeholder="Buscar emojis..." onkeyup="filterEmojis()">
+      <span id="clearSearch" class="clear-icon">&times;</span>
+  </div>
+    <div id="emoji-container"></div>
+    <script src="script.min.js"></script>
+  </body>
+</html>

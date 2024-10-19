@@ -1,0 +1,122 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+h1, h4 {
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#search {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#emoji-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.emoji-card {    
+    transition: background-color 0.3s, color 0.3s;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+    width: 150px;
+    height: 200px;
+    /* Altura fija para tarjetas uniformes */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    cursor: pointer;
+    /* Cambia el cursor a puntero */
+}
+
+.emoji-card:hover {
+    transform: scale(1.05);
+}
+
+.emoji {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.card-name {
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.card-description {
+    color: #666;
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.card-code {
+    font-family: monospace;
+    font-size: 12px;
+    color: #007bff;
+}
+
+/* Modo claro */
+body.light-mode {
+    background-color: white;
+    color: black;
+}
+
+.card.light-mode {
+    background-color: #f9f9f9;
+}
+
+/* Modo oscuro */
+body.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+.card.dark-mode {
+    background-color: #1e1e1e;
+}
+
+/* Contenedor de búsqueda */
+.search-container {
+    position: relative;
+    width: 300px;
+    margin: 20px auto;
+}
+
+/* Caja de búsqueda */
+#search {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Estilos del ícono "X" */
+.clear-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 20px;
+    display: none;
+    color: darkgrey;
+}
+
+.clear-icon.visible {
+    display: block; 
+}
