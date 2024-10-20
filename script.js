@@ -3,7 +3,7 @@ let emojis = []; // Variable global para almacenar los emojis
 // Función para cargar y mostrar emojis
 async function loadEmojis() {
   try {
-    const response = await fetch("emojis.min.json");
+    const response = await fetch("emojis.json");
     emojis = await response.json();
     displayEmojis(emojis);
   } catch (error) {
