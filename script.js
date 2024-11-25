@@ -19,7 +19,7 @@ function displayEmojis(emojisToDisplay) {
   emojisToDisplay.forEach((emoji, index) => {
     const card = document.createElement("div");
     card.classList.add("emoji-card"); 
-    card.innerHTML = `<div class="emoji">${emoji.emoji}</div><div class="card-name">${index + 1}. </div><div class="card-name">${emoji.name}</div><div class="card-description">${emoji.description}</div><div class="card-code">${emoji.code}</div>`;
+    card.innerHTML = `<div class="emoji">${emoji.emoji}</div><div class="card-name">${emoji.name}</div><div class="card-description">${emoji.description}</div><div class="card-code">${emoji.code}</div>`;
     card.setAttribute('title', emoji.code);
     card.onclick = () => copyCode(emoji.code);
     container.appendChild(card);
@@ -49,20 +49,6 @@ function filterEmojis() {
   displayEmojis(filteredEmojis);
 }
 
-// Detectar el modo del sistema
-function setTheme() {
-  const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-  document.body.classList.toggle('dark-mode', isDarkMode);
-  document.body.classList.toggle('light-mode', !isDarkMode);
-
-  // Aplicar clase a las tarjetas
-  const cards = document.querySelectorAll('.card');
-  cards.forEach(card => {
-      card.classList.toggle('dark-mode', isDarkMode);
-      card.classList.toggle('light-mode', !isDarkMode);
-  });
-}
-
 // Función para manejar el ícono "X" en el buscador
 function handleClearButton() {
   const searchInput = document.getElementById('search');
@@ -84,9 +70,5 @@ function handleClearButton() {
 // Inicializar
 window.onload = () => {
   loadEmojis();
-  setTheme();
   handleClearButton();
-
-  // Cambiar tema si el usuario cambia la configuración del sistema
-  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', setTheme);
 };
