@@ -19,7 +19,12 @@ function displayEmojis(emojisToDisplay) {
   emojisToDisplay.forEach((emoji, index) => {
     const card = document.createElement("div");
     card.classList.add("emoji-card"); 
-    card.innerHTML = `<div class="emoji">${emoji.emoji}</div><div class="card-name">${emoji.name}</div><div class="card-description">${emoji.description}</div><div class="card-code">${emoji.code}</div>`;
+     
+    card.innerHTML = `<div class="emoji">${emoji.emoji}</div>
+    <div class="card-name">${emoji.name}</div>
+    <div class="card-description">${emoji.description}</div>
+    <div class="card-code">${emoji.code}</div>`;
+
     card.setAttribute('title', emoji.code);
     card.onclick = () => copyCode(emoji.code);
     container.appendChild(card);
