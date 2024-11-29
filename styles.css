@@ -1,11 +1,11 @@
+
 #emoji-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 15px;
 }
-
-.emoji-card {    
+.emoji-card {
     transition: background-color 0.3s, color 0.3s;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -20,13 +20,17 @@
     /* Cambia el cursor a puntero */
 }
 
+.emoji-card div {
+    padding: 0% !important;
+    margin-bottom: 0 !important;
+}
+
 .emoji-card:hover {
     transform: scale(1.05);
 }
 
 .emoji {
     font-size: 60px;
-    margin-bottom: 10px;
 }
 
 /* Contenedor de búsqueda */
@@ -49,5 +53,5 @@
 }
 
 .clear-icon.visible {
-    display: block; 
+    display: block;
 }
