@@ -12,20 +12,21 @@
   </head>
   <body>
     <header>
-      <h1>Lista de Emojis</h1>
-      <h4>Selecciona un emoji para copiarlo al portapapeles</h4>
+      <img src="../dev-laoz-WaveArtCSS/assets/favicons/favicon.png" alt="Logo de la Compañía"
+      style="width: 50px; height: auto;" />
+      <h1>Lista de Emojis</h1>      
     </header>
     <main>
-      <div class="search-container">
-        <input
-          type="text"
-          id="search"
-          placeholder="Buscar emojis..."
-          onkeyup="filterEmojis()"
-        />
-        <span id="clearSearch" class="clear-icon">&times;</span>
+      <div class="container">
+          <input
+            type="search"
+            id="search"
+            placeholder="Buscar emojis..."
+            onkeyup="filterEmojis()"
+          />
+        <p>Selecciona un emoji para copiarlo al portapapeles</p>
+        <div id="emoji-container"></div>
       </div>
-      <div id="emoji-container"></div>
     </main>
     <footer>
       <p>© 2024 Mi Negocio. Todos los derechos reservados.</p>
